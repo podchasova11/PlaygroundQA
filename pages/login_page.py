@@ -1,5 +1,4 @@
 import allure
-
 from pages.base_page import BasePage
 
 
@@ -13,3 +12,12 @@ class LoginPage(BasePage):
     @allure.step("Enter username")
     def enter_username(self, username):
         self.driver.find_element(*self.USERNAME_FIELD).send_keys(username)
+
+    def enter_login(self):
+        pass
+
+    def enter_password(self):
+        pass
+
+    def click_on_login_button(self):
+        pass
