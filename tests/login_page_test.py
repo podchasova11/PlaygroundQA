@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from pages.login_page import LoginPage
@@ -11,6 +12,7 @@ class TestLoginPage:
 
     # Вызываем через объект страницы все нужные методы, это и есть шаги теста
     def test_login_in_account(self):
+        with allure.step()
         self.login_page.open()  # open() подхватит PAGE_URL именно с LoginPage
         self.login_page.enter_login()
         self.login_page.enter_password()

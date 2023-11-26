@@ -13,11 +13,11 @@ class LoginPage(BasePage):
     def enter_username(self, username):
         self.driver.find_element(*self.USERNAME_FIELD).send_keys(username)
 
-    def enter_login(self):
-        pass
+    # def enter_login(self):
+    #     pass
 
-    def enter_password(self):
-        pass
+    def enter_password(self, password):
+        self.driver.find_element(*self.PASSWORD_FIELD).send_keys(password)
 
     def click_on_login_button(self):
-        pass
+        self.driver.find_element(*self.LOGOUT_BUTTON).click()
