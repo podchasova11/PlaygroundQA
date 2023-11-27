@@ -2,3 +2,4 @@
 .idea/dbnavigator.xml
 .idea/jpa-buddy.xml
 .venv/
+__pycache__
