@@ -3,6 +3,7 @@ from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
+
     PAGE_URL = "https://demoqa.com/login"
 
     USERNAME_FIELD = "//input[@id='userName']"
@@ -10,14 +11,18 @@ class LoginPage(BasePage):
     LOGIN_BUTTON = "//button[@id='login']"
 
     @allure.step("Enter username")
-    def enter_username(self, username):
-        self.driver.find_element(*self.USERNAME_FIELD).send_keys(username)
+    def enter_username(self):
+        # with allure .step(f"Enter username {username}"):
+        self.find(self.USERNAME_FIELD).send_keys(self.generators.generate_email(10))
 
     # def enter_login(self):
     #     pass
+    @allure.step("Enter password")
+    def enter_password(self):
+        self.find(self.PASSWORD_FIELD).send_keys(self.generators.generate_password(6))
+        self.wait_for_visibility(self.PASSWORD_FIELD).click()
 
-    def enter_password(self, password):
-        self.driver.find_element(*self.PASSWORD_FIELD).send_keys(password)
-
+    @allure.step("Click on login button")
     def click_on_login_button(self):
-        self.driver.find_element(*self.LOGOUT_BUTTON).click()
+        self.find(self.LOGOUT_BUTTON).click()
+
