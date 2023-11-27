@@ -11,13 +11,13 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
 
-#@pytest.mark.usefixtures("driver")  # Фикстура драйвера
+@pytest.mark.usefixtures()  # Фикстура драйвера
 class TestLoginPage:
 
     def setup(self):
-        self.login_page = LoginPage(self.driver)  # Создаем обьект страницы
-
+        self.login_page = LoginPage.PAGE_URL()  # Создаем обьект страницы
     # Вызываем через объект страницы все нужные методы, это и есть шаги теста
+
     @allure.title("Example")
     def test_login_in_account(self):
         self.login_page.open()  # open() подхватит PAGE_URL именно с LoginPage
