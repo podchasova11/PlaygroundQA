@@ -1,10 +1,11 @@
 import allure
 from pages.base_page import BasePage
+from data.links import Links
 
 
-class LoginPage(BasePage):
+class ContactPage(BasePage):
 
-    PAGE_URL = "https://demoqa.com/login"
+    PAGE_URL = Links.CONTACT_PAGE
 
     USERNAME_FIELD = "//input[@id='userName']"
     PASSWORD_FIELD = "//input[@id='password']"

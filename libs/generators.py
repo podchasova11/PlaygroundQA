@@ -11,5 +11,5 @@ class Generators:
 
     def generate_password(self, length):
         characters = string.ascii_lowercase + string.digits
-        password = ''.join(random.choice(characters) for i in range(length)) + "@example"
+        password = ''.join(random.choice(characters) for i in range(length))
         return password
