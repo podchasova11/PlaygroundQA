@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -19,10 +20,11 @@ class BasePage:
 
     # Данный метод будет вызываться для любой страницы, принимая ее PAGE_URL
     def open(self):
-        self.driver.get(self.PAGE_URL)
+        with allure.step(f"Open {self.PAGE_URL} page"): # "этот метод явл тестовым шагом, поэтому маркируем его аллюром
+            self.driver.get(self.PAGE_URL)
 
     # Ниже описываются общие для всех страниц методы
-    def find(self, lokator):
+    def find(self, lokator):                             # "эти методы не явл тестовым шагом, поэтому не маркируем их аллюром:
         return self.driver.find_element("xpath", locator)
 
     # метод, который ждет, пока элемент найдется,
