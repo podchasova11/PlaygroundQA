@@ -6,10 +6,14 @@ from data.links import Links
 class ContactPage(BasePage):
 
     PAGE_URL = Links.CONTACT_PAGE
+    NEW_CONTACT_BUTTON = "//a[@aria-label='New Contact']"
 
-    USERNAME_FIELD = "//input[@id='userName']"
-    PASSWORD_FIELD = "//input[@id='password']"
-    LOGIN_BUTTON = "//button[@id='login']"
+    # USERNAME_FIELD = "//input[@id='userName']"
+    # PASSWORD_FIELD = "//input[@id='password']"
+    # LOGIN_BUTTON = "//button[@id='login']"
+    @allure.step("Click on new contact button")
+    def click_on_new_contact_button(self):
+        self.find(self.NEW_CONTACT_BUTTON).click()
 
     @allure.step("Enter username")
     def enter_username(self):
