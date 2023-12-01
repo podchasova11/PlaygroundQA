@@ -1,6 +1,8 @@
 import allure
 import pytest
 from pip._vendor import requests
+
+from config.base_test import BaseTest
 from pages.contact_card_page import ContactCardPage
 from pages.contact_page import ContactPage
 import time
@@ -11,11 +13,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 @allure.feature("Contacts")
-class TestContacts:
-
-    def setup(self):
-        self.contact_page = ContactPage(self.driver)
-        self.contact_card_page = ContactCardPage(self.driver)
+class TestContacts(BaseTest):
 
     @allure.title("Add new contact")
     def test_add_new_contact(self):
