@@ -1,6 +1,6 @@
 import allure
 
-from pages.base_page import BasePage
+from config.base_page import BasePage
 from data.links import Links
 
 
