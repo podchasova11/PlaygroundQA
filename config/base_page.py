@@ -19,8 +19,8 @@ class BasePage:
         self.generators = Generators()
 
     # Данный метод будет вызываться для любой страницы, принимая ее PAGE_URL
-    def open(self):
-        with allure.step(f"Open {self.PAGE_URL} page"): # "этот метод явл тестовым шагом, поэтому маркируем его аллюром
+    def open(self):      # "этот метод явл тестовым шагом, поэтому маркируем его аллюром:
+        with allure.step(f"Open {self.PAGE_URL} page"):
             self.driver.get(self.PAGE_URL)
 
     # Ниже описываются общие для всех страниц методы
@@ -34,6 +34,11 @@ class BasePage:
     # делать что-то еще с ним
     def wait_for_visibility(self, locator):
         return self.wait.until(EC.visibility_of_element_located("xpath", locator))
+
+
+
+
+
 
         # def click_on_logout_button(self):
         #     self.driver.find_element(*self.LOGOUT_BUTTON).click()
