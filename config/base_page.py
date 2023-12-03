@@ -10,7 +10,6 @@ class BasePage:
     # Тут описываются локаторы
     LOGOUT_BUTTON = ("xpath", "//button[@id='logout']")
     LOGO_LINK = ("xpath", "//a[@id='logo']")
-    ...
 
     # Тут создаются необходимые обьекты, которые будут доступны в pages
     def __init__(self, driver):
@@ -24,8 +23,10 @@ class BasePage:
             self.driver.get(self.PAGE_URL)
 
     # Ниже описываются общие для всех страниц методы
-    def find(self, lokator):                             # "эти методы не явл тестовым шагом, поэтому не маркируем их аллюром:
+    def find(self, locator):
         return self.driver.find_element("xpath", locator)
+    # "эти методы не явл тестовым шагом, поэтому не маркируем их аллюром:
+
 
     # метод, который ждет, пока элемент найдется,
     # return -
