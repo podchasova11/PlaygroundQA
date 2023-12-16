@@ -3,5 +3,6 @@
 .idea/jpa-buddy.xml
 .venv/
 __pycache__
+
  libs/__pycache__
  pages/__pycache__
