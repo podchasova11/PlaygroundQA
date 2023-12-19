@@ -23,4 +23,3 @@ def get_driver(request):
 #
 # # Возвращение соединения с БД
 #     return connection
-#
