@@ -1,5 +1,5 @@
-#import time
-#import sqlite3
+import time
+import sqlite3
 import pytest
 import os
 from selenium import webdriver
