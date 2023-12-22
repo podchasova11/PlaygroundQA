@@ -16,10 +16,10 @@ def get_driver(request):
     yield
     driver.quit()
 
-# # Установка соединения с базой данных
-# def connect_database():
-#     connection = sqlite3.connect('test.db')
-#     print("Соединение с БД установлено")
-#
-# # Возвращение соединения с БД
-#     return connection
+# Установка соединения с базой данных
+def connect_database():
+    connection = sqlite3.connect('test.db')
+    print("Соединение с БД установлено")
+
+# Возвращение соединения с БД
+    return connection
