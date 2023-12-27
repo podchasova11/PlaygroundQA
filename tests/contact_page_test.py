@@ -4,13 +4,13 @@ import allure
 from pip._vendor import requests
 
 from config.base_test import BaseTest
-# from pages.contact_card_page import ContactCardPage
-# from pages.contact_page import ContactPage
-# import time
-# from selenium import webdriver
-# from webdriver_manager.chrome import ChromeDriverManager
-# from selenium.webdriver.chrome.service import Service
-# from selenium.webdriver.chrome.options import Options
+from pages.contact_card_page import ContactCardPage
+from pages.contact_page import ContactPage
+import time
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 
 
 @allure.feature("Contacts")
