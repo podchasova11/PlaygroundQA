@@ -1,7 +1,6 @@
 import random
 import string
 
-
 class Generators:
 
     def generate_email(self, length):
