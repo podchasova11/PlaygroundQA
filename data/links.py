@@ -6,3 +6,4 @@ class Links:
 
     CONTACT_PAGE = f"{STAGE}/#/contacts"
     CONTACT_CARD_PAGE = f"{STAGE}/#/contacts/create"
+    
