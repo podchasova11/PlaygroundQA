@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from libs.generators import Generators
 
 
+
 class BasePage:
 
     # Тут описываются локаторы
