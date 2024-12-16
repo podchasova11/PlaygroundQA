@@ -3,6 +3,7 @@ import time
 import allure
 from pip._vendor import requests
 
+
 from config.base_test import BaseTest
 from pages.contact_card_page import ContactCardPage
 from pages.contact_page import ContactPage
