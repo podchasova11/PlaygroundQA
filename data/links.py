@@ -1,5 +1,4 @@
 
-
 class Links:
 
     STAGE = "https://release-crm.qa-playground.com/"
